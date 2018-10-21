@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ClassOne.py	../ClassOne.py	1;"	kind:file	line:1
+EUtoUS-Elevator.py	../EUtoUS-Elevator.py	1;"	kind:file	line:1
+a	../test1.py	/^a = 2+5$/;"	kind:variable	line:60
+a	../test3.py	/^a=23$/;"	kind:variable	line:5
+ab	../test1.py	/^ab=223;$/;"	kind:variable	line:36
+ab	../test1.py	/^ab=ac;		#we can assign any value to any varaible without any transformation$/;"	kind:variable	line:40
+ac	../test1.py	/^ac='Akshay Bengani';$/;"	kind:variable	line:37
+b	../test1.py	/^b= 3.3*3$/;"	kind:variable	line:61
+b	../test3.py	/^b=56$/;"	kind:variable	line:6
+c	../test1.py	/^c = 10.0\/25$/;"	kind:variable	line:62
+c	../test3.py	/^c=a+b$/;"	kind:variable	line:7
+cat	../test1.py	/^cat = 'catenation'$/;"	kind:variable	line:99
+charactervalue	../test1.py	/^charactervalue='akshay bengani';	# Takes string and characters both $/;"	kind:variable	line:20
+con	../test1.py	/^con= 'con'$/;"	kind:variable	line:98
+floatvalue	../test1.py	/^floatvalue=2.54456;		#Float value or double value whatever you say$/;"	kind:variable	line:17
+imp	../EUtoUS-Elevator.py	/^imp = input('Europe floor? ')$/;"	kind:variable	line:2
+number	../test1.py	/^number=2;		#number variable there is no declaration required	$/;"	kind:variable	line:14
+string	../test1.py	/^string= 'I am a string' # We can assign a string directly$/;"	kind:variable	line:81
+string1	../test1.py	/^string1= "I am a string"	#We can assign using double quotes also$/;"	kind:variable	line:82
+string2	../test1.py	/^string2 =  "con" + "catenation" #This will concate two strings and store them in a varible$/;"	kind:variable	line:93
+string2	../test1.py	/^string2 = 2 * ("con" + "catenation") # This will multiple the containing string two times$/;"	kind:variable	line:96
+test1.py	../test1.py	1;"	kind:file	line:1
+test2.py	../test2.py	1;"	kind:file	line:1
+test3.py	../test3.py	1;"	kind:file	line:1
+usf	../EUtoUS-Elevator.py	/^usf = int(imp) + 1$/;"	kind:variable	line:3
+word	../test1.py	/^word = 'L' + word[1:]$/;"	kind:variable	line:103
+word	../test1.py	/^word = 'ford'$/;"	kind:variable	line:102
+x	../ClassOne.py	/^x=5$/;"	kind:variable	line:4
