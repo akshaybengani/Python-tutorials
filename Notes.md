@@ -124,3 +124,76 @@ Hello Glenn
 Hola Sally
 Bonjour Micael
 ```
+# Iteration Statements
+Similar like other languages python also have **while** and **for** loop but with different syntax.
+
+## While Loop
+While is a loop which actually works like a repeatativly if condition, therefore the while loop continoously checks and works till the if condition become false
+
+```python
+n=5
+while n>0:
+    print(n)
+    n = n - 1
+print("Blastoff")
+print(n)
+```
+
+There are two types of loops **definate** and **Infinite**
+Definate loops which stops the loop after a set of steps and infinite loops do not stops and runs coontinuously
+
+## Break Statement
+
+The break statement ends the current loop and jumps to the statement immediately following the loop. It is like a loop test that can happpen anywhere in the body of the loop
+```python
+while True:
+    line = input('> ')
+    if line == 'done':
+        break
+    print(line)
+print('Done!')
+```
+
+
+## Continue
+The continue statement ends the current iteration and jumps to the top ooof the loop and starts the next iteration.
+```python
+while True:
+    line = input('> ')
+    if line[0] == '#':
+        continue
+    if line == 'done':
+        break
+    print(line)
+print('Done!')
+```
+The output will be
+```
+> hello there
+hello there
+> #don't print this
+> print this!
+> done
+Done!
+```
+
+## For Loop
+For loop also known as Definite Loops have explicit **iteration variables** that change each time through a looop. These **iteration variables** move through the sequence or set.
+
+### Looking at in
+The Iteration variable iterates through the sequence (ordered set).<br>
+The block (body) of code is executed once for each value in the sequence.<br>
+The iteratioon variables moves through all of the values in the sequence.
+```python
+for i in [5,4,3,2,1]:
+    print(i)
+```
+
+
+
+
+
+
+
+
+
