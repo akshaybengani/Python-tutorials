@@ -1,5 +1,5 @@
 # Python Basics
-Python is a programming language who do not use semicolon inn the end of the statement.
+Python is a programming language who do not use semicolon at the end of the statement.
 
 ## Print in Python
 In Python 2 you can print without using brackets
@@ -188,6 +188,117 @@ The iteratioon variables moves through all of the values in the sequence.
 for i in [5,4,3,2,1]:
     print(i)
 ```
+
+## Strings
+A string is a sequence of characters A string literal uses quotes '' "" <br>
+For strings, + means "concatenate"
+when a string contains numbers, it is still a string. we can convert numbers in a string into a number using ```int()```<br>
+```python
+apple = input("Enter qty ")
+# This will give error
+x = apple - 10
+# We need to convert String into int
+x = int(apple) - 10
+```
+### Looking inside Strings
+* We can get at any single character in a string using an index specified in square brackets
+* The index value must be an integer and start at zero
+* The index value can be an expression that is computed
+```python
+fruit = "banana"
+letter = fruit[1]
+print(letter)
+# a
+x = 3
+w = fruit[x - 1]
+print(w)
+# n
+```
+###  A Character too far
+* You will get a python error if you attempt to index beyond the end of a sting
+* So be careful when constructing index values and slices
+```python
+zot = "abc"
+print(zot[5])
+# error index out of range
+```
+### Length Function String
+the built in function ```len()``` gives us the length of a string
+```python
+fruit = "banana"
+print(len(fruit))
+# 6
+```
+### Lower and Upper String Functions
+* Python has a number of string ```fucntions``` which are in the ```String Liberary```
+* These ```functions``` are already ```built into``` every string we invoke them by appending the fuction to the string variable
+* These ```functions``` do not modify the orignal String, insteed they return a new string that has been altered
+```python
+name = "Akshay Bengani"
+nameInSmall = name.lower()
+# akshay bengani
+nameInCapital = name.upper()
+# AKSHAY BENGANI
+print(name)
+# Akshay Bengani
+```
+For more string functions [visit](https://docs.python.org/3/library/stdtypes.html#sting-methods)
+
+### String Slicing
+* We can also look at any continous section of a string using a color operator
+* The second number is one beyond the end of the slice = "up to but not including"
+* If the second number is beyond the end of the string, it stops at the end
+```python
+s = "Monty Python"
+# M o n t y   P y t h o  n
+# 0 1 2 3 4 5 6 7 8 9 10 11
+
+print(s[0:4])
+# Mont
+print(s[6:7])
+# P
+print(s[6:20])
+# Python
+print(s[:2])
+# Mo
+print(s[8:])
+# thon
+print(:)
+# Monty Python
+```
+### Parsing and Extracting
+When we need partitcular part of the string then we need to find its starting position and ending position and then we can slice the string text
+```python
+data = "From akshay.16BCAN018@jecrcu.edu.in Wed Jan 23 06:11:16 2019"
+startpos = data.find('@')
+print(atpos)
+#21
+endpos = data.find(" ",atpos)
+print(endpos)
+#34
+host = data[startpos + 1 : endpos]
+print(host)
+# jecrcu.edu.in
+```
+
+### Using ```in``` as a logical Operator
+* The ```in``` keyword can also be used to check to see if one string is "in" another string
+* The ```in``` expression is a logical expression taht returns ```True``` or ```False``` and can be used in an ```if``` statement
+```python
+fruit = "banana"
+'n' in fruit
+# True
+'m' in fruit
+# False
+"nan" in fruit
+# True
+if 'a' in fruit:
+    print("Found it")
+# Found it
+```
+
+
+
 
 
 
