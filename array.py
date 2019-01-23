@@ -3,7 +3,7 @@ size = input("Enter the size of the array ")
 print("Enter the elements of the array")
 size = int(size)
 
-arr[0] = 0
+arr = []
 
 for i in range(size):
     arr[i] =  input()

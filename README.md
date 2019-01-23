@@ -296,15 +296,3 @@ if 'a' in fruit:
     print("Found it")
 # Found it
 ```
-
-
-
-
-
-
-
-
-
-
-
-
