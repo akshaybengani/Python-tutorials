@@ -296,3 +296,57 @@ if 'a' in fruit:
     print("Found it")
 # Found it
 ```
+### The Newline Character
+* We use a special character called the newline to indicate when a line ends.
+* We represent it as ```\n``` in strings.
+* String value "X```\n```Y" its length is 3 characters not 4
+
+## Files
+
+Right now we will be only dealing  with the text files no pdf no word document no network or database files only text files.
+* Before we can read the contents of the file, we must tell python which file we are going to work with and what we  will be doing with the file.
+* This is done with the ```open()``` function.
+* ```open(filename,mode)``` returns a file handle -a variable used to perform operations on the file.
+* Similar to File-> open in a Word Processor
+* Mode is optional and should be ```r``` if we are planning to read the file and ```w``` if we are going to write to the file.
+* Since printing the file handler will not print its text it will print file detail.
+```python
+fhand  = open('members.txt')
+print(fhand)
+# <_io.TextIOWrapper name='members.txt' mode='r' encoding='UTF-8'>
+```
+### File Handle as a Sequence
+* A ```file handle``` open for read can bbe treated as a sequence of strings where each line in the file is a string in the sequence
+* We can use the for statement to iterate through a sequence
+* Remember-a sequence is an ordered set
+```python
+myfile = open('members.txt')
+for name in myfile:
+    print(name)
+```
+### Counting Lines in a File
+* Open a ```file``` read-only
+* Use a ```for``` loop to read each line
+* ```Count``` the lines and print  out the number of lines
+```python
+myfile = open('filename.txt')
+count = 0
+
+for lines in myfile:
+    count = count + 1
+
+print("Line Count:",count)
+```
+### Reading the whole file
+* We can read the whole file including (newlines and all) into a single string
+```python
+myfile = open('members.txt')
+data = myfile.read()
+print(len(data))
+# 686
+print(data)
+# So now we have a string which contain whole file
+```
+
+
+ 
