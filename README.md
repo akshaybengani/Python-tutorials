@@ -310,11 +310,14 @@ Right now we will be only dealing  with the text files no pdf no word document n
 * Similar to File-> open in a Word Processor
 * Mode is optional and should be ```r``` if we are planning to read the file and ```w``` if we are going to write to the file.
 * Since printing the file handler will not print its text it will print file detail.
+
+To open a file we use ```open()``` function which takes two parameters ```filepath``` and ```mode```.
 ```python
-fhand  = open('members.txt')
+fhand  = open('members.txt',r)
 print(fhand)
 # <_io.TextIOWrapper name='members.txt' mode='r' encoding='UTF-8'>
 ```
+In case if u dont pass any mode it will be by default to read mode. 
 ### File Handle as a Sequence
 * A ```file handle``` open for read can bbe treated as a sequence of strings where each line in the file is a string in the sequence
 * We can use the for statement to iterate through a sequence
@@ -323,6 +326,9 @@ print(fhand)
 myfile = open('members.txt')
 for name in myfile:
     print(name)
+# Akshay Bengani
+# Shivank Gautam
+# Yash
 ```
 ### Counting Lines in a File
 * Open a ```file``` read-only
@@ -338,7 +344,9 @@ for lines in myfile:
 print("Line Count:",count)
 ```
 ### Reading the whole file
-* We can read the whole file including (newlines and all) into a single string
+* We can read the whole file including (newlines and all) into a single string.
+* The ```read()``` function is used to read the file from the filepointer.
+* So now the ```data``` variable contains the whole text of the file in form of string seperated with ```\n``` at the end of the file.
 ```python
 myfile = open('members.txt')
 data = myfile.read()
@@ -347,6 +355,86 @@ print(len(data))
 print(data)
 # So now we have a string which contain whole file
 ```
+### Searching Through a File
+* We can put an ```if``` statement in our ```for``` loop to only print lines that meet some criteria.
+```python
+fhand = open('mailBox.txt',r)
+for line in fhand:
+    if line.startswith('From:'):
+        print(line)
+# From: Akshay Bengani
+
+# From : Shivank Gautam
+
+# From : Yash
+
+```
+### Blank Lines in the print statement
+* Since in the previous example you can see a blank line at the end of every matching statement
+* Each line from the file has a ```newline``` at the end.
+* The ```print``` statement adds a ```newline``` to each line.
+```
+From: Akshay Bengani\n
+\n
+From : Shivank Gautam\n
+\n
+From : Yash\n
+\n
+```
+### Searching through a file (fixed)
+* So now we will remove the extra spacing using the function ```rstrip()```. We can strip the whitespace from the right-hand side of the string using ```rstrip()``` from the string liberary.
+* The new line is considered ```whitespace``` and is stripped.
+```python
+fhand = open('mailBox.txt',r)
+for line in fhand:
+    line = line.rstrip()
+    if line.startswith('From :'):
+        print(line)        
+# From : Akshay Bengani
+# From : Shivank Gautam
+# From : Yash
+```
+### Printing lines which not starts from something
+* In case if you want to use a line which is not in the search terms we use ```not``` keyword in ```if```
+```python
+fhand = open('mailbox',r)
+for line in fhand:
+    line = line.rstrip()
+    if not '@uct.ac.za' in line:
+        print(line)
+# This will print all those lines who dont contain @uct.ac.za
+```
+### Count the number of subject lines in a file
+```python
+fname = input("Enter your file name")
+count = 0
+fhand = open(fname)
+for line in fhand:
+    line = line.rstrip()
+    if 'Subject:' in line:
+        count = count + 1
+print("There were ",count,"subject lines in ",fname)
+# There were 1797 subject line in mbox.txt
+```
+### To check the filename exist or not
+* Before starting we will learn about the ```quit()``` function this function is used to terminate the run operation in the middle of the code.
+* Invocation of ```quit()``` function helps to terminate the program if something goes wrong.
+```python
+fname = input('Enter the filename: ')
+
+try:
+    fhand = open(fname)
+except:
+    print("File not found ",fname)
+    quit()
+
+# All your remaining code ...
+```
+
+## Lists
+* Data structures are structured variables also called as collection variables.
+* **Algorithms** A set of rules or steps used to solve  a problem
+* **Data Structures** A particular way of organizing data in a computer.
 
 
- 
+
