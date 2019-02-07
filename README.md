@@ -435,6 +435,17 @@ except:
 * Data structures are structured variables also called as collection variables.
 * **Algorithms** A set of rules or steps used to solve  a problem
 * **Data Structures** A particular way of organizing data in a computer.
+* In this module we will be learning about list, dictionary and tuples first we will be going.
+
+### What is not a Collection
+Most of our ```variables``` have one value in them - when we put a new value in the variable the old value is overwritten
+```python
+x = 2
+x = 4
+print(x)
+# 4
+```
+
 
 
 
