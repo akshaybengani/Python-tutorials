@@ -189,7 +189,7 @@ for i in [5,4,3,2,1]:
     print(i)
 ```
 
-## Strings
+# Strings
 A string is a sequence of characters A string literal uses quotes '' "" <br>
 For strings, + means "concatenate"
 when a string contains numbers, it is still a string. we can convert numbers in a string into a number using ```int()```<br>
@@ -200,7 +200,7 @@ x = apple - 10
 # We need to convert String into int
 x = int(apple) - 10
 ```
-### Looking inside Strings
+## Looking inside Strings
 * We can get at any single character in a string using an index specified in square brackets
 * The index value must be an integer and start at zero
 * The index value can be an expression that is computed
@@ -214,7 +214,7 @@ w = fruit[x - 1]
 print(w)
 # n
 ```
-###  A Character too far
+##  A Character too far
 * You will get a python error if you attempt to index beyond the end of a sting
 * So be careful when constructing index values and slices
 ```python
@@ -222,14 +222,14 @@ zot = "abc"
 print(zot[5])
 # error index out of range
 ```
-### Length Function String
+## Length Function String
 the built in function ```len()``` gives us the length of a string
 ```python
 fruit = "banana"
 print(len(fruit))
 # 6
 ```
-### Lower and Upper String Functions
+## Lower and Upper String Functions
 * Python has a number of string ```fucntions``` which are in the ```String Liberary```
 * These ```functions``` are already ```built into``` every string we invoke them by appending the fuction to the string variable
 * These ```functions``` do not modify the orignal String, insteed they return a new string that has been altered
@@ -244,7 +244,7 @@ print(name)
 ```
 For more string functions [visit](https://docs.python.org/3/library/stdtypes.html#sting-methods)
 
-### String Slicing
+## String Slicing
 * We can also look at any continous section of a string using a color operator
 * The second number is one beyond the end of the slice = "up to but not including"
 * If the second number is beyond the end of the string, it stops at the end
@@ -266,7 +266,7 @@ print(s[8:])
 print(:)
 # Monty Python
 ```
-### Parsing and Extracting
+## Parsing and Extracting
 When we need partitcular part of the string then we need to find its starting position and ending position and then we can slice the string text
 ```python
 data = "From akshay.16BCAN018@jecrcu.edu.in Wed Jan 23 06:11:16 2019"
@@ -281,7 +281,7 @@ print(host)
 # jecrcu.edu.in
 ```
 
-### Using ```in``` as a logical Operator
+## Using ```in``` as a logical Operator
 * The ```in``` keyword can also be used to check to see if one string is "in" another string
 * The ```in``` expression is a logical expression taht returns ```True``` or ```False``` and can be used in an ```if``` statement
 ```python
@@ -296,12 +296,12 @@ if 'a' in fruit:
     print("Found it")
 # Found it
 ```
-### The Newline Character
+## The Newline Character
 * We use a special character called the newline to indicate when a line ends.
 * We represent it as ```\n``` in strings.
 * String value "X```\n```Y" its length is 3 characters not 4
 
-## Files
+# Files
 
 Right now we will be only dealing  with the text files no pdf no word document no network or database files only text files.
 * Before we can read the contents of the file, we must tell python which file we are going to work with and what we  will be doing with the file.
@@ -318,7 +318,7 @@ print(fhand)
 # <_io.TextIOWrapper name='members.txt' mode='r' encoding='UTF-8'>
 ```
 In case if u dont pass any mode it will be by default to read mode. 
-### File Handle as a Sequence
+## File Handle as a Sequence
 * A ```file handle``` open for read can bbe treated as a sequence of strings where each line in the file is a string in the sequence
 * We can use the for statement to iterate through a sequence
 * Remember-a sequence is an ordered set
@@ -330,7 +330,7 @@ for name in myfile:
 # Shivank Gautam
 # Yash
 ```
-### Counting Lines in a File
+## Counting Lines in a File
 * Open a ```file``` read-only
 * Use a ```for``` loop to read each line
 * ```Count``` the lines and print  out the number of lines
@@ -343,7 +343,7 @@ for lines in myfile:
 
 print("Line Count:",count)
 ```
-### Reading the whole file
+## Reading the whole file
 * We can read the whole file including (newlines and all) into a single string.
 * The ```read()``` function is used to read the file from the filepointer.
 * So now the ```data``` variable contains the whole text of the file in form of string seperated with ```\n``` at the end of the file.
@@ -355,7 +355,7 @@ print(len(data))
 print(data)
 # So now we have a string which contain whole file
 ```
-### Searching Through a File
+## Searching Through a File
 * We can put an ```if``` statement in our ```for``` loop to only print lines that meet some criteria.
 ```python
 fhand = open('mailBox.txt',r)
@@ -369,7 +369,7 @@ for line in fhand:
 # From : Yash
 
 ```
-### Blank Lines in the print statement
+## Blank Lines in the print statement
 * Since in the previous example you can see a blank line at the end of every matching statement
 * Each line from the file has a ```newline``` at the end.
 * The ```print``` statement adds a ```newline``` to each line.
@@ -381,7 +381,7 @@ From : Shivank Gautam\n
 From : Yash\n
 \n
 ```
-### Searching through a file (fixed)
+## Searching through a file (fixed)
 * So now we will remove the extra spacing using the function ```rstrip()```. We can strip the whitespace from the right-hand side of the string using ```rstrip()``` from the string liberary.
 * The new line is considered ```whitespace``` and is stripped.
 ```python
@@ -394,7 +394,7 @@ for line in fhand:
 # From : Shivank Gautam
 # From : Yash
 ```
-### Printing lines which not starts from something
+## Printing lines which not starts from something
 * In case if you want to use a line which is not in the search terms we use ```not``` keyword in ```if```
 ```python
 fhand = open('mailbox',r)
@@ -404,7 +404,7 @@ for line in fhand:
         print(line)
 # This will print all those lines who dont contain @uct.ac.za
 ```
-### Count the number of subject lines in a file
+## Count the number of subject lines in a file
 ```python
 fname = input("Enter your file name")
 count = 0
@@ -416,7 +416,7 @@ for line in fhand:
 print("There were ",count,"subject lines in ",fname)
 # There were 1797 subject line in mbox.txt
 ```
-### To check the filename exist or not
+## To check the filename exist or not
 * Before starting we will learn about the ```quit()``` function this function is used to terminate the run operation in the middle of the code.
 * Invocation of ```quit()``` function helps to terminate the program if something goes wrong.
 ```python
@@ -431,13 +431,13 @@ except:
 # All your remaining code ...
 ```
 
-## Lists
+# Lists
 * Data structures are structured variables also called as collection variables.
 * **Algorithms** A set of rules or steps used to solve  a problem
 * **Data Structures** A particular way of organizing data in a computer.
 * In this module we will be learning about list, dictionary and tuples first we will be going.
 
-### What is not a Collection
+## What is not a Collection
 Most of our ```variables``` have one value in them - when we put a new value in the variable the old value is overwritten
 ```python
 x = 2
@@ -445,14 +445,14 @@ x = 4
 print(x)
 # 4
 ```
-### List as a Collection
+## List as a Collection
 * A ```collection``` allows us to put many values in a single ```variable```.
 * A ```collection``` is nice because we can carry ```many values``` around in one convenient package.
 ```python
 friends = ['Akshay','Shivank','Yash']
 carryon = ['PowerBank','Charger','Laptop']
 ```
-### List Constants
+## List Constants
 * **List** constants are surrounded by square brackets and the elements in the list are separated by commas.
 * A **List** element can be any Python object - even another list
 * A list can be empty.
@@ -496,7 +496,7 @@ print("Done !")
 # Happy New Year Yash
 # Done !
 ```
-### List are Mutable
+## List are Mutable
 * Stings are **immutable** - we cannot change the contents of a String - we must make a ```new String``` to make any change or replace the whole string to change something in the string.
 * List are **mutable** - we can ```change``` an element of a list using the index operator.
 ```python
@@ -517,7 +517,7 @@ digits[2] = 56
 print(digits)
 # [2,7,56,90,8,789]
 ```
-### List have a length
+## List have a length
 * The ```len()``` fuction takes a **list** as a parameter and returns the number of **elements** in the **list**
 * Actually ```len()``` tells us the number of elements of any set or sequence (such as a String...)
 ```python
@@ -528,7 +528,7 @@ x = [1,2,[3,67],8,79.87,'Akshay']
 print(len(x))
 # 6
 ```
-### Using the Range Function
+## Using the Range Function
 * The **range** function **returns a list of numbers** that range from zero to one less than the **parameter**
 * We can construct an index loop using **for** and an integer **iterator**.
 ```python
@@ -540,7 +540,7 @@ print(len(friends))
 print(range(len(friends)))
 # [0,1,2]
 ```
-### Need of a counted loop like in Traditional Languages
+## Need of a counted loop like in Traditional Languages
 * In some cases we need to use loop in more traditional way like if we need to do something on some index number not by the value then we need something to measure which index number is going on as such we can use this way to solve the issue.
 ```python
 friends = ['Akshay','Shivank','Yash']
