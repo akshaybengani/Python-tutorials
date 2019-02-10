@@ -445,6 +445,113 @@ x = 4
 print(x)
 # 4
 ```
+### List as a Collection
+* A ```collection``` allows us to put many values in a single ```variable```.
+* A ```collection``` is nice because we can carry ```many values``` around in one convenient package.
+```python
+friends = ['Akshay','Shivank','Yash']
+carryon = ['PowerBank','Charger','Laptop']
+```
+### List Constants
+* **List** constants are surrounded by square brackets and the elements in the list are separated by commas.
+* A **List** element can be any Python object - even another list
+* A list can be empty.
+```python
+print([1,24,56])
+# A list with just values
+# [1,24,76]
+
+print(['Red','Green','Yellow'])
+# A list contains Strings in quotes
+# ['Red','Green','Yellow']
+
+print(['red',23,23.3])
+# A Hybrid list
+# ['red',23,23.3]
+
+print([1,[3,5],67,7.9])
+# List containing List
+# [1,[3,5],67,7.9]
+
+print([])
+# Empty List for furthur use
+# []
+```
+* We have used list in ```for```
+```python
+for i in [3,7,6,8]:
+    print(i)
+print("Blastoff!")
+```
+* Program to wish **New year** to ur **friends** list
+```python
+friends = ['Akshay','Shivank','Aastha','Yash']
+for friend in friends:
+    print("Happy New Year:",friend)
+print("Done !")
+
+# Happy New Year Akshay
+# Happy New Year Shivank
+# Happy New Year Aastha
+# Happy New Year Yash
+# Done !
+```
+### List are Mutable
+* Stings are **immutable** - we cannot change the contents of a String - we must make a ```new String``` to make any change or replace the whole string to change something in the string.
+* List are **mutable** - we can ```change``` an element of a list using the index operator.
+```python
+fruit = 'Banana'
+fruit[0] = 'b'
+# TypeError: 'str' object does not support item assignment
+
+# Replaceing whole string in new String or replacing in the same by rewritting the whole text in the string
+small = fruit.lower()
+print(lower)
+# banana
+
+# You can always replace a index value by using its index.
+digits = [2,7,8,90,8,789]
+print(digits)
+# [2,7,8,90,8,789]
+digits[2] = 56
+print(digits)
+# [2,7,56,90,8,789]
+```
+### List have a length
+* The ```len()``` fuction takes a **list** as a parameter and returns the number of **elements** in the **list**
+* Actually ```len()``` tells us the number of elements of any set or sequence (such as a String...)
+```python
+welcome = 'Hello Akshay'
+print(len(welcome))
+# 12
+x = [1,2,[3,67],8,79.87,'Akshay']
+print(len(x))
+# 6
+```
+### Using the Range Function
+* The **range** function **returns a list of numbers** that range from zero to one less than the **parameter**
+* We can construct an index loop using **for** and an integer **iterator**.
+```python
+print(range(4))
+# [0,1,2,3]
+friends = ['Akshay','Shivank','Yash']
+print(len(friends))
+# 3
+print(range(len(friends)))
+# [0,1,2]
+```
+### Need of a counted loop like in Traditional Languages
+* In some cases we need to use loop in more traditional way like if we need to do something on some index number not by the value then we need something to measure which index number is going on as such we can use this way to solve the issue.
+```python
+friends = ['Akshay','Shivank','Yash']
+for i in range(len(friends)):
+    friend = friends[i]
+    print('Happy new year:', friend)
+# Happy new year: Akshay
+# Happy new year: Shivank
+# Happy new year: Yash
+```
+
 
 
 
