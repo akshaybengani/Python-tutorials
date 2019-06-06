@@ -575,6 +575,179 @@ print(a[:3])
 print(a[:])
 # [1,5,45,45,211]
 ```
+<<<<<<< HEAD
+=======
+
+### List Methods
+Similarly to the string methods there are also some methods about list
+
+append,count,extend,index,insert,pop,remove,reverse,sort
+[visit](http:docs.python.org/tutorial/datastructures.html)
+
+### Building a List from Scratch
+* We can create an empty list using the fucntion ```list()``` and then add elements using the function ```append()```.
+* The list stays in order and new elements are added at the end of the list.
+```python
+mylist = list()
+mylist.append("Akshay")
+mylist.append("Shivank")
+mylist.append("Yash")
+print(mylist)
+# ['Akshay','Shivank','Yash']
+```
+* At any point of the program you can add values in the list at end using append function.
+
+### Is Something in a List ?
+* Python provides two operators that let you check if an item is in a list.
+* These are logical operators that return True or False
+* They do not modify the list.
+```python
+mylist = [3,4,67,76,4,75]
+67 in mylist
+# True
+1 in mylist
+# False
+```
+### Sorting a List in Alphabetic Order
+* A list can hold many items and keeps those items in the order until we do something to change the order.
+* A list can be sorted using the function  ```sort()```.
+* The sort method means "Sort Yourself"
+```python
+friends = ['Shivank','Akshay','Yash']
+print(friends)
+# ['Shivank','Akshay','Yash']
+friends.sort()
+print(friends)
+# ['Akshay','Shivank','Yash']
+```
+### Some cool built in functions in list
+* There are a number of functions built into Python that take lists as parameters,
+* Remember the loops we built> These are much simpler.
+```python
+num = [3,5,75,86,97,95,56,4,3]
+print(len(num))
+# 9
+print(max(num))
+# 97
+print(min(num))
+# 3
+print(sum(num))
+# 424
+print(sum(num)/len(sum))
+# 47.11
+```
+## Lists and Strings
+So now we will be checking how Strings and Lists work together what are the common things in the Strings and List and how to use some inbuilt functions to manipulate or create new lists from Stings.
+### Split() function
+* In python there is a function called Split which splits all the words in a String in set of values in a List
+* Split breaks a String into parts and produces a list of Strings. We think of these as words. We can access a particular word or loop through all the words.
+```python
+myString = "Hi my name is Akshay Bengani"
+myWords = myString.split()
+print(myWords)
+# ['Hi','my','name','is','Akshay','Bengani']
+print(len(myWords))
+# 6
+```
+#### Delimeter in split
+* It dosent matter how much blank spaces are between two words they will be counted as a single space.
+* You can also specify a delimeter which will be used in replacement of space.
+* For example if we need to sepearte values by ';' then just pass the ';' in the split function paramenter this will split words as per the ';'.
+```python
+myString = "Hi;my;name;is;Akshay;Bengani"
+myList = myString.split(';')
+print(myList)
+# ['Hi','my','name','is','Akshay','Bengani']
+print(len(myList))
+# 6
+```
+#### Using split for searching
+You can use split for searching something in the file or a String.
+```python
+fhand = open('mbox-short.txt',r)
+mydays = list()
+for line in fhand:
+    lwords = line.split()
+    mydays.append(lwords[2])
+print(mydays)
+# ['Mon','Wed','Sat','Fri','Tue','Thu']
+```
+#### Double Split Pattern
+Sometimes we split a line one way and then grab one of the pieces of the line and split that piece again.
+* For Example if we need the domain address from the mbox records as such then we need to split the text in words by spaces and then by the @.
+```python
+fhand = open('mbox-short.txt',r)
+for line in fhand:
+    words = line.split()
+    email = words[1]
+    emailparts = email.split('@')
+    domain = emailparts[1]
+    print(domain)
+# jecrcu.edu.in
+# uct.ac.za
+# gmail.com
+```
+## List Summary
+* Concept of a collection
+* Lists and definite loops
+* Indexing and lookup
+* List mutuability
+* Functions len,min,max,sum,append,sort
+* Slicing lists
+* Splitting Strings into Lists of words
+* Using split to search
+
+# Dictionaries
+It is also a collection like lists.
+A list is a linear collection of values that stay in order. and A dictionary is a bag of values, each with its own label.
+* Dictionaries are Python's most powerful data collection
+* Dictionaries allow us to do fast database-like operations in Python
+#### In Other Languages
+* Dictionaries have different names in different languages.
+* Associative Arrays - Perl/PHP
+* Properties of Map or HashMap - JAVA
+* Property Bag - C# / .Net
+* Its like a ```key:value``` pair of each value insteed of indexing.
+## Initialization
+* Lists ```index``` theier entries based on the position in the list.
+* ```Dictionaries``` are like bags - no order.
+* So we ```index``` the things we put in the ```Dictionaries``` with a ```lookup tag```.
+* We can modify the values using the key pair to identify the cell
+```python
+user = dict()
+user['name'] = "Akshay Bengani"
+user['age'] = 20
+user['marks'] = 84.5
+print(user)
+# {'name': 'Akshay Bengani', 'marks': 84.5, 'age': 20}
+user['age'] = user['age'] + 1
+print(user)
+# {'name': 'Akshay Bengani', 'marks': 84.5, 'age': 21}
+```
+## Comparision Between List and Dictionaries
+* Dictionaries are like lists except that they use keys insteed of numbers to look up values.
+* Dictionaries have labels and lists have positions.
+* Lists are indexed as such they always starts with 0 whereas Dictionaries don't folloy any order.
+
+![List and Dictionary](img/listanddict.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 97b443ec90c0eeaaf077af209d8d1ba4ad77956b
 
 ### List Methods
 Similarly to the string methods there are also some methods about list
