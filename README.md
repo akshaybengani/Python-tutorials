@@ -439,7 +439,7 @@ except:
 * **Data Structures** A particular way of organizing data in a computer.
 * In this module we will be learning about list, dictionary and tuples first we will be going.
 
-## What is not a Collection
+### What is not a Collection
 Most of our ```variables``` have one value in them - when we put a new value in the variable the old value is overwritten
 ```python
 x = 2
@@ -447,7 +447,7 @@ x = 4
 print(x)
 # 4
 ```
-## List as a Collection
+### List as a Collection
 * A ```collection``` allows us to put many values in a single ```variable```.
 * A ```collection``` is nice because we can carry ```many values``` around in one convenient package.
 ```python
@@ -498,7 +498,7 @@ print("Done !")
 # Happy New Year Yash
 # Done !
 ```
-## List are Mutable
+### List are Mutable
 * Stings are **immutable** - we cannot change the contents of a String - we must make a ```new String``` to make any change or replace the whole string to change something in the string.
 * List are **mutable** - we can ```change``` an element of a list using the index operator.
 ```python
@@ -519,9 +519,9 @@ digits[2] = 56
 print(digits)
 # [2,7,56,90,8,789]
 ```
-## List have a length
+### List have a length
 * The ```len()``` fuction takes a **list** as a parameter and returns the number of **elements** in the **list**
-* Actually ```len()``` tells us the number of elements of any set or sequence (such as a String...)
+* Actually ```len()``` tells us the number of elements of any set or sequence (such as a string)
 ```python
 welcome = 'Hello Akshay'
 print(len(welcome))
@@ -530,7 +530,7 @@ x = [1,2,[3,67],8,79.87,'Akshay']
 print(len(x))
 # 6
 ```
-## Using the Range Function
+### Using the Range Function
 * The **range** function **returns a list of numbers** that range from zero to one less than the **parameter**
 * We can construct an index loop using **for** and an integer **iterator**.
 ```python
@@ -542,7 +542,7 @@ print(len(friends))
 print(range(len(friends)))
 # [0,1,2]
 ```
-## Need of a counted loop like in Traditional Languages
+### Need of a counted loop like in Traditional Languages
 * In some cases we need to use loop in more traditional way like if we need to do something on some index number not by the value then we need something to measure which index number is going on as such we can use this way to solve the issue.
 ```python
 friends = ['Akshay','Shivank','Yash']
@@ -553,7 +553,250 @@ for i in range(len(friends)):
 # Happy new year: Shivank
 # Happy new year: Yash
 ```
+## List Manipulation
+We can create a new list by adding two existing lists together.
+```python
+a = [1,44,56]
+b = [24,46,67]
+c = a + b
+print(c)
+# [1,44,56,24,46,67]
+print(a)
+# [1,44,56]
+```
+### Lists can be Slided Using :
+Just like strings the second number is ip to but not including.
+```python
+a = [1,5,45,45,211]
+print(a[1:3])
+# [5,45]
+print(a[:3])
+# [1,5,45]
+print(a[:])
+# [1,5,45,45,211]
+```
 
+### List Methods
+Similarly to the string methods there are also some methods about list
+
+append,count,extend,index,insert,pop,remove,reverse,sort
+[visit](http:docs.python.org/tutorial/datastructures.html)
+
+### Building a List from Scratch
+* We can create an empty list using the fucntion ```list()``` and then add elements using the function ```append()```.
+* The list stays in order and new elements are added at the end of the list.
+```python
+mylist = list()
+mylist.append("Akshay")
+mylist.append("Shivank")
+mylist.append("Yash")
+print(mylist)
+# ['Akshay','Shivank','Yash']
+```
+* At any point of the program you can add values in the list at end using append function.
+
+### Is Something in a List ?
+* Python provides two operators that let you check if an item is in a list.
+* These are logical operators that return True or False
+* They do not modify the list.
+```python
+mylist = [3,4,67,76,4,75]
+67 in mylist
+# True
+1 in mylist
+# False
+```
+### Sorting a List in Alphabetic Order
+* A list can hold many items and keeps those items in the order until we do something to change the order.
+* A list can be sorted using the function  ```sort()```.
+* The sort method means "Sort Yourself"
+```python
+friends = ['Shivank','Akshay','Yash']
+print(friends)
+# ['Shivank','Akshay','Yash']
+friends.sort()
+print(friends)
+# ['Akshay','Shivank','Yash']
+```
+### Some cool built in functions in list
+* There are a number of functions built into Python that take lists as parameters,
+* Remember the loops we built> These are much simpler.
+```python
+num = [3,5,75,86,97,95,56,4,3]
+print(len(num))
+# 9
+print(max(num))
+# 97
+print(min(num))
+# 3
+print(sum(num))
+# 424
+print(sum(num)/len(sum))
+# 47.11
+```
+## Lists and Strings
+So now we will be checking how Strings and Lists work together what are the common things in the Strings and List and how to use some inbuilt functions to manipulate or create new lists from Stings.
+### Split() function
+* In python there is a function called Split which splits all the words in a String in set of values in a List
+* Split breaks a String into parts and produces a list of Strings. We think of these as words. We can access a particular word or loop through all the words.
+```python
+myString = "Hi my name is Akshay Bengani"
+myWords = myString.split()
+print(myWords)
+# ['Hi','my','name','is','Akshay','Bengani']
+print(len(myWords))
+# 6
+```
+#### Delimeter in split
+* It dosent matter how much blank spaces are between two words they will be counted as a single space.
+* You can also specify a delimeter which will be used in replacement of space.
+* For example if we need to sepearte values by ';' then just pass the ';' in the split function paramenter this will split words as per the ';'.
+```python
+myString = "Hi;my;name;is;Akshay;Bengani"
+myList = myString.split(';')
+print(myList)
+# ['Hi','my','name','is','Akshay','Bengani']
+print(len(myList))
+# 6
+```
+#### Using split for searching
+You can use split for searching something in the file or a String.
+```python
+fhand = open('mbox-short.txt',r)
+mydays = list()
+for line in fhand:
+    lwords = line.split()
+    mydays.append(lwords[2])
+print(mydays)
+# ['Mon','Wed','Sat','Fri','Tue','Thu']
+```
+#### Double Split Pattern
+Sometimes we split a line one way and then grab one of the pieces of the line and split that piece again.
+* For Example if we need the domain address from the mbox records as such then we need to split the text in words by spaces and then by the @.
+```python
+fhand = open('mbox-short.txt',r)
+for line in fhand:
+    words = line.split()
+    email = words[1]
+    emailparts = email.split('@')
+    domain = emailparts[1]
+    print(domain)
+# jecrcu.edu.in
+# uct.ac.za
+# gmail.com
+```
+## List Summary
+* Concept of a collection
+* Lists and definite loops
+* Indexing and lookup
+* List mutuability
+* Functions len,min,max,sum,append,sort
+* Slicing lists
+* Splitting Strings into Lists of words
+* Using split to search
+
+# Dictionaries
+It is also a collection like lists.
+A list is a linear collection of values that stay in order. and A dictionary is a bag of values, each with its own label.
+* Dictionaries are Python's most powerful data collection
+* Dictionaries allow us to do fast database-like operations in Python
+#### In Other Languages
+* Dictionaries have different names in different languages.
+* Associative Arrays - Perl/PHP
+* Properties of Map or HashMap - JAVA
+* Property Bag - C# / .Net
+* Its like a ```key:value``` pair of each value insteed of indexing.
+## Initialization
+* Lists ```index``` theier entries based on the position in the list.
+* ```Dictionaries``` are like bags - no order.
+* So we ```index``` the things we put in the ```Dictionaries``` with a ```lookup tag```.
+* We can modify the values using the key pair to identify the cell
+```python
+user = dict()
+user['name'] = "Akshay Bengani"
+user['age'] = 20
+user['marks'] = 84.5
+print(user)
+# {'name': 'Akshay Bengani', 'marks': 84.5, 'age': 20}
+user['age'] = user['age'] + 1
+print(user)
+# {'name': 'Akshay Bengani', 'marks': 84.5, 'age': 21}
+```
+## Comparision Between List and Dictionaries
+* Dictionaries are like lists except that they use keys insteed of numbers to look up values.
+* Dictionaries have labels and lists have positions.
+* Lists are indexed as such they always starts with 0 whereas Dictionaries don't folloy any order.
+
+![List and Dictionary](img/listanddict.png)
+
+## Dictionary Literals Constants
+* Dictionary literals use curly braces and have a list of ```key : value``` pairs
+* You can make an ```empty dictionary``` using empty curly braces.
+
+```python
+myd1 = {'name':'Akshay Bengani','age':'21','College':'JECRC University'}
+print(myd1)
+# {'name':'Akshay Bengani','age':'21','College':'JECRC University'}
+myd2 = {}
+print(myd2)
+# {}
+myd3 = dict()
+print(myd3)
+# {}
+```
+### Dictionary Tracebacks
+* It is an error to reference a key which is not in the dictionary
+* We can use the ```in``` operator to see if a key is in the dictionary.
+```python
+myd1 = dict()
+print(myd1['name'])
+# Traceback (most recent call last):
+#   File "<stdin", line 1, in <module>
+# Keyerror: 'name'
+'name' in myd1
+# false 
+```
+### Count the number of same names in a list using dictionary
+* When we encounter a new name, we need to add a new entry in the dictionary and if this the second or later time we have seen the name, we simply add one to the count in the dictionary under that name
+```python
+counts = {}
+names = ['akshay','shivank','yash','akshay','naman','shivank','akshay','yash','shivank']
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] + 1
+print(counts)
+# {'akshay': 3, 'shivank': 3, 'naman': 1, 'yash': 2}
+```
+### The ```get``` Method for Dictionaries
+* The pattern of checking to see if a key is already in a dictionary and assuming a default value if the key is not there is so common that there is a method called get() that does this for us.
+* Defauly value if key does not exist (and no Traceback).
+```python
+if name in counts:
+    x = counts[name]
+else:
+    x = 0
+#---------------------------
+x = counts.get(name,0)
+```
+### Simplified using ```get()``` in counting
+* we can use get() and provide a default value of zero when the key is not yet in the dictionary - and then just add one
+```python
+counts = {}
+names = ['akshay','shivank','yash','akshay','naman','shivank','akshay','yash','shivank']
+for name in names:
+    counts[name] = counts.get(name,0) + 1
+print(counts)
+# {'akshay': 3, 'shivank': 3, 'naman': 1, 'yash': 2}
+```
+## Dictiionaries with Files
+* The general pattern to count the words in a line of text is to split the line into words, then loop through the words and use a dictionary to track the count of each word independently.
+```python
+counts = {}
+line = input("Enter the file name")
+words = line.split()
+```
 
 
 
