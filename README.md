@@ -1,7 +1,7 @@
 # Python Basics
-* Python is a programming language who do not use semicolon at the end of the statement.
-* This tutorial is for those who have a basic knowledge of programming in any other language like loops, variables, conditional statements etc.
-* It will be really easy for someone to learn python from this tutorials if he/she have basic idea of the above topics.
+* Python is a programming language that does not use semicolon at the end of the statement.
+* This tutorial is for those who have a basic knowledge of programming in any other language like loops, variables, conditional statements, etc.
+* It will be really easy for someone to learn python from these tutorials if he/she has a basic idea of the above topics.
 
 ## Print in Python
 In Python 2 you can print without using brackets
@@ -22,13 +22,13 @@ a = input("Enter your name here ");
 This will take input and store it in a variable
 
 # Python Expressions
-Expressions are made up of variables, contants, operators, functions, Reserved Words, Comments and lot more cool stuff.
+Expressions are made up of variables, constants, operators, functions, Reserved Words, Comments, and a lot more cool stuff.
 
 ## Comments in Python
-To Comment in python we use \# to comment out something.
+To Comment in Python, we use \# to comment out something.
 
 ## Type conversion 
-In Python when we take input we use input() function this function only takes string type so we need to typecast when we needed a Integer operations or any other type operation other then String.
+In Python when we take the input we use input() function this function only takes string type so we need to typecast when we needed an Integer operation or any other type operation other than String.
 
 ```python
 age = input("Enter your age ")
@@ -36,7 +36,7 @@ age = int(age) + 5
 print(age)
 ```
 
-In order to do so for example we need to print age with adding +5 in it so we need to typecast String to Integer byusing int() function.
+In order to do so for example we need to print age with adding +5 in it so we need to typecast String to Integer by using int() function.
 
 ## Print Arguments
 In python3 if u want to print multiple things in one print function we use ',' for the case in order to pass multiple arguments for example
@@ -48,7 +48,7 @@ Note '+' operator also works and ',' operator only works in python3 properly.
 
 # Conditional Statements
 Similar like other programming language python also uses if statements but with some different programming syntax
-<br>In Python we use : insteed of blocks and a tab indentation in order to recorganize the block of code for example
+<br>In Python we use : instead of blocks and a tab indentation in order to reorganize the block of code for example
 ```python
 if z>5:
     print("Hey there")
@@ -73,9 +73,9 @@ if z>5:
 -----------------------------------------
 
 ## Indentation
-In python indentation is very important in python it is not just for the better understandable of code but also for representing the block of code.
+In python indentation is very important, it is not just for the better understandable of code but also for representing the block of code.
 <br>
-You can use text editors like VSCode, Atom, Sublime Text. These text editors come with autoarrangement and can handle the automotic indentation.
+You can use text editors like VSCode, Atom, Sublime Text. These text editors come with auto arrangement and can handle the automatic indentation.
 
 ## Conditional Statements
 Similar like other languages we have if else and elseif(elif) in python
@@ -92,8 +92,8 @@ print("All Done")
 # Functions in Python
 Functions are the reuasble code we can call or invoke them to reuse the code inside the code
 
-## In built functions
-In Python we have some predefined functions like max() and min() these functions are called as In built functions and are used to calculate the largest value of the parameter passed inside..
+## Inbuilt functions
+In Python we have some predefined functions like max() and min() these functions are called as Inbuilt functions and are used to calculate the largest value of the parameter passed inside.
 
 ```python
 big = max("HelloWorld")
@@ -130,7 +130,7 @@ Bonjour Micael
 Similar like other languages python also have **while** and **for** loop but with different syntax.
 
 ## While Loop
-While is a loop which actually works like a repeatativly if condition, therefore the while loop continoously checks and works till the if condition become false
+While is a loop which actually works like a repetitively if condition, therefore the while loop continuously checks and works till the if condition becomes false
 
 ```python
 n=5
@@ -141,12 +141,12 @@ print("Blastoff")
 print(n)
 ```
 
-There are two types of loops **definate** and **Infinite**
-Definate loops which stops the loop after a set of steps and infinite loops do not stops and runs coontinuously
+There are two types of loops **definite** and **Infinite**
+Definite loops which stop the loop after a set of steps and infinite loops do not stop and runs continuously
 
 ## Break Statement
 
-The break statement ends the current loop and jumps to the statement immediately following the loop. It is like a loop test that can happpen anywhere in the body of the loop
+The break statement ends the current loop and jumps to the statement immediately following the loop. It is like a loop test that can happen anywhere in the body of the loop
 ```python
 while True:
     line = input('> ')
@@ -180,12 +180,12 @@ Done!
 ```
 
 ## For Loop
-For loop also known as Definite Loops have explicit **iteration variables** that change each time through a looop. These **iteration variables** move through the sequence or set.
+For loop also known as Definite Loops have explicit **iteration variables** that change each time through a loop. These **iteration variables** move through the sequence or set.
 
 ### Looking at in
 The Iteration variable iterates through the sequence (ordered set).<br>
 The block (body) of code is executed once for each value in the sequence.<br>
-The iteratioon variables moves through all of the values in the sequence.
+The iteration variables move through all of the values in the sequence.
 ```python
 for i in [5,4,3,2,1]:
     print(i)
@@ -217,7 +217,7 @@ print(w)
 # n
 ```
 ##  A Character too far
-* You will get a python error if you attempt to index beyond the end of a sting
+* You will get a python error if you attempt to index beyond the end of a string
 * So be careful when constructing index values and slices
 ```python
 zot = "abc"
@@ -232,9 +232,9 @@ print(len(fruit))
 # 6
 ```
 ## Lower and Upper String Functions
-* Python has a number of string ```fucntions``` which are in the ```String Liberary```
-* These ```functions``` are already ```built into``` every string we invoke them by appending the fuction to the string variable
-* These ```functions``` do not modify the orignal String, insteed they return a new string that has been altered
+* Python has a number of string ```functions``` which are in the ```String Liberary```
+* These ```functions``` are already ```built into``` every string we invoke them by appending the function to the string variable
+* These ```functions``` do not modify the original String, instead they return a new string that has been altered
 ```python
 name = "Akshay Bengani"
 nameInSmall = name.lower()
@@ -247,7 +247,7 @@ print(name)
 For more string functions [visit](https://docs.python.org/3/library/stdtypes.html#sting-methods)
 
 ## String Slicing
-* We can also look at any continous section of a string using a color operator
+* We can also look at any continuous section of a string using a color operator
 * The second number is one beyond the end of the slice = "up to but not including"
 * If the second number is beyond the end of the string, it stops at the end
 ```python
@@ -305,8 +305,8 @@ if 'a' in fruit:
 
 # Files
 
-Right now we will be only dealing  with the text files no pdf no word document no network or database files only text files.
-* Before we can read the contents of the file, we must tell python which file we are going to work with and what we  will be doing with the file.
+Right now we will be only dealing with the text files no pdf no word document no network or database files only text files.
+* Before we can read the contents of the file, we must tell python which file we are going to work with and what we will be doing with the file.
 * This is done with the ```open()``` function.
 * ```open(filename,mode)``` returns a file handle -a variable used to perform operations on the file.
 * Similar to File-> open in a Word Processor
@@ -366,9 +366,9 @@ for line in fhand:
         print(line)
 # From: Akshay Bengani
 
-# From : Shivank Gautam
+# From: Shivank Gautam
 
-# From : Yash
+# From: Yash
 
 ```
 ## Blank Lines in the print statement
@@ -506,7 +506,7 @@ fruit = 'Banana'
 fruit[0] = 'b'
 # TypeError: 'str' object does not support item assignment
 
-# Replaceing whole string in new String or replacing in the same by rewritting the whole text in the string
+# Replacing whole string in new String or replacing in the same by rewriting the whole text in the string
 small = fruit.lower()
 print(lower)
 # banana
